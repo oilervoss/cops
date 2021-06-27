@@ -91,7 +91,7 @@ abstract class Base
             if (!is_null($database) && !preg_match('/^\d+$/', $database)) {
                 self::error ($database);
             }
-            $array = array_values ($config['db_Subtitle']);
+            $array = array_values ($config['database_subtitle']);
             return  $array[$database];
         }
         return "";
