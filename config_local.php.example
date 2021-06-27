@@ -9,17 +9,23 @@
      ***************************************************
      */
 
-    /*
+     /*
      * The directory containing calibre's metadata.db file, with sub-directories
      * containing all the formats.
      * BEWARE : it has to end with a /
+     * You can enable multiple database with this notation instead of a simple string :
+     * $config['calibre_directory'] = array ("My database name" => "/home/directory/calibre1/", "My other database name" => "/home/directory/calibre2/");
      */
-    $config['calibre_directory'] = './';
+     $config['calibre_directory'] = array ("My database name" => "/home/directory/calibre1/", "My other database name" => "/home/directory/calibre2/");
+    
+     $config['database_subtitle'] = array ("My database name" => "Subtitle", "My other database name" => "Subtitle");
+    
     
     /*
      * Catalog's title
      */
     $config['cops_title_default'] = "COPS";
+    $config['cops_subtitle_default'] = "";
     
     /*
      * use URL rewriting for downloading of ebook in HTML catalog
