@@ -8,11 +8,12 @@
 {{??}}
 {{~it.entries:entry:i}}
     {{? it.containsBook == 0}}
-    <article>
+    <article class="databases">
         <div class="frontpage">
             {{? entry.navlink != "#"}}<a href="{{=entry.navlink}}" {{=it.c.config.kindleHack}}>{{?}}
                 <h2>{{=htmlspecialchars (entry.title)}}</h2>
-                <h4>{{=entry.content}}</h4> 
+                <h4>{{=entry.content}}</h4>
+                <h5>{{=entry.subtitle}}</h5>
             {{? entry.navlink != "#"}}</a>{{?}}
         </div>
     </article>
