@@ -84,6 +84,21 @@ abstract class Base
         return "";
     }
 
+    public static function getDbSubtitle ($database = NULL) {
+        global $config;
+        if (self::isMultipleDatabaseEnabled ()) {
+            if (is_null ($database)) $database = GetUrlParam (DB, 0);
+            if (!is_null($database) && !preg_match('/^\d+$/', $database)) {
+                self::error ($database);
+            }
+            $array = array_values ($config['db_Subtitle']);
+            return  $array[$database];
+        }
+        return "";
+    }
+
+
+
     public static function getDbDirectory ($database = NULL) {
         global $config;
         if (self::isMultipleDatabaseEnabled ()) {
